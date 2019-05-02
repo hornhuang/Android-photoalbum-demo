@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+        <!--使用红色得分割条-->
+        <ListView
+            android:id="@+id/list1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#f00"
+            android:dividerHeight="2px"
+            android:headerDividersEnabled="false">
+        </ListView>
+        <!--用于存放和发送新的信息-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:background="#66ffffff"
+            android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                        <!--设置最大行数-->
+                        <EditText
+                            android:id="@+id/ifo_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="请输入内容"
+                            android:maxLines="6"
+                            android:textColorHint="#c0c0c0" />
+                        <!--存放新的图片-->
+                        <ImageView
+                            android:id="@+id/ifo_image"
+                            android:layout_width="130dp"
+                            android:layout_height="110dp"
+                            android:src="@drawable/addphoto" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                        <!--点击取消发送消息-->
+                        <Button
+                            android:id="@+id/delete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_gravity="left"
+                            android:text="取消"
+                            android:textSize="16sp" />
+                        <!--点击发送消息-->
+                        <Button
+                            android:id="@+id/send"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="发送"
+                            android:textSize="16sp" />
+                </RelativeLayout>
+        </LinearLayout>
+</RelativeLayout>
